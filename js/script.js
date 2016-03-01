@@ -103,7 +103,7 @@ var TrashModel = function(_lable, _cell, remarks) {
       /****ADD****/
     } else {
       // 不定期回収の場合（YYYYMMDD指定）
-      result_text = "不定期 ";
+      result_text = "";
       this.regularFlg = 0;  // 定期回収フラグオフ
     }
   }
@@ -531,8 +531,8 @@ $(function() {
               target_tag += "<ul>";
             }
 
-            target_tag += '<li style="list-style:none;"><div>' + target.name + "</div>";
-            target_tag += '<div class="note">' + target.notice + "</div></li>";
+            target_tag += '<li style="list-style:none;">' + target.name + "</li>";
+            target_tag += '<p class="note">' + target.notice + "</p>";
           }
 
           target_tag += "</ul>";
